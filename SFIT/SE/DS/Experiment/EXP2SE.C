@@ -16,7 +16,7 @@ int top=-1;
 
 book getbookdetails();
 void push(book b);
-void pop();
+book *pop();
 void peep();
 void display();
 void show(book b);
@@ -25,6 +25,7 @@ void main()
 {
   int choice;
   book b;
+  book *bp;
   clrscr();
   while(1)
   {
@@ -37,7 +38,11 @@ void main()
 		   b=getbookdetails();
 		   push(b);
 		   break;
-	   case 2: pop();
+	   case 2: bp=pop();
+		   if(bp!=NULL)
+		   {
+		    show(*bp);
+		    }
 		   break;
 	   case 3: peep();
 		   break;
@@ -80,17 +85,18 @@ void show(book b)
   printf("\nBook name = %s, pages=%d, price=%f\n",b.name,b.pages,b.price);
   }
 
-void pop()
+book *pop()
 {
   if(top==-1)
   {
     printf("\n Stack Empty\n");
+    return NULL;
     }
   else
   {
+    top--;
     printf("\n The Book removed is\n");
-    show(stack[top]);
-    top-- ;
+    return (&stack[top+1]);
   }
 }
 

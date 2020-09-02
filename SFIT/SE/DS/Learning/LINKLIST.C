@@ -10,7 +10,7 @@ typedef struct node
 
 void display(node*);
 node * insert_beg(node *);
-//node * insert_end(node *);
+node * insert_end(node *);
 
 int main()
 {
@@ -26,8 +26,8 @@ int main()
 		{
 			case 1: start=insert_beg(start);
 				break;
-		      //	case 2: start=insert_end(start);
-			//	break;
+			case 2: start=insert_end(start);
+				break;
 			case 3: display(start);
 				break;
 			case 4: exit(0);
@@ -64,3 +64,28 @@ node * insert_beg(node * start)
 	start=newnode;
 	return start;
 }
+
+node * insert_end(node * start)
+{
+    node *newnode=malloc(sizeof(node));
+    node * ptr;
+    printf("Enter data: ");
+    scanf("%d",&newnode->data);
+    ptr=start;
+    if(start==NULL)
+    {
+	newnode->next=start;
+	start=newnode;
+	return start;
+    }
+    else
+    {
+	while (ptr->next!=NULL)
+	{
+		ptr=ptr->next;
+	}
+	ptr->next=newnode;
+	newnode->next=NULL;
+    }
+    return start;
+};

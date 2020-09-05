@@ -12,7 +12,6 @@ void main()
  clrscr();
 
  initgraph(&gdriver,&gmode,"C:\\TC\\BGI");
- printf("Domingos J Pinto\nSE CMPN B \nRoll No 16 \n192093\n");
  printf("Note to user:500>x>25 500>y>200\n");
  printf("Enter value of starting point (x1,y1) :\n");
  scanf("%f%f",&x1,&y1);

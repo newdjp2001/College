@@ -8,8 +8,7 @@ void main()
  int dx,dy,p;
  clrscr();
 
- initgraph(&gdriver,&gmode,"C:\\TC\\BGI");
- printf("Domingos J Pinto\nSE CMPN B \nRoll No 16 \n192093\n");
+ initgraph(&gdriver,&gmode,"C:\\TC\\BGI"); //Set path to BGI
  printf("Enter value of starting point (x1,y1) :\n");
  scanf("%d%d",&x1,&y1);
  printf("Enter value of starting point (x2,y2) :\n");

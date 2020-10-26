@@ -37,7 +37,6 @@ void main()
 	int x,y,r;
 	clrscr();
 	initgraph(&gdriver,&gmode,"C:\\TC\\BGI"); //set your path to BGI
-	printf("Domingos J Pinto\nSE CMPN B \nRoll No 16 \n192093\n");
 	printf("Note to user : x>199 & y>199\n");
 	printf("Enter value of centre point (x,y) :\n");
 	scanf("%d%d",&x,&y);

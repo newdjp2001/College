@@ -9,7 +9,6 @@ void main()
 	float xc,yc,ry,rx;
 	clrscr();
 	initgraph(&gdriver,&gmode,"C:\\TC\\BGI"); //set your path to BGI
-	printf("Domingos J Pinto\nSE CMPN B \nRoll No 16 \n192093\n");
 	printf("Note to user x>200 y>200\n");
 	printf("Enter center x and y of the ellipse:\n");
 	scanf("%f%f",&xc,&yc);
